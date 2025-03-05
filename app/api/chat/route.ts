@@ -138,7 +138,7 @@ export async function POST(req: Request) {
           );
         }
 
-        const chat = await getChat(userId, chatId, data);
+        const chat = await getChat(userId, chatId);
         if (!chat) {
           return new Response(JSON.stringify({ error: "Chat not found" }), {
             status: 404,

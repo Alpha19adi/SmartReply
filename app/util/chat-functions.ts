@@ -64,7 +64,7 @@ async function getAllChats(userId: string) {
 }
 
 // Get a specific chat
-async function getChat(userId: string, chatId: number, data: { relation?: string; mood?: string; } | undefined) {
+async function getChat(userId: string, chatId: number) {
   return await Chat.findOne({ id: chatId, userId });
 }
 

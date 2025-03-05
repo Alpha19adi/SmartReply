@@ -102,7 +102,7 @@ const ChatQuestionnaire = ({ onComplete }: QuestionnaireProps) => {
                 >
                   <div className="flex items-center gap-3">
                     {step === 2 && (
-                      <span className="text-xl">{getMoodEmoji(option )}</span>
+                      <span className="text-xl">{getMoodEmoji(option as keyof typeof QUESTIONNAIRE_DATA.moodEmojis)}</span>
                     )}
                     <span className="font-medium">{option}</span>
                   </div>
